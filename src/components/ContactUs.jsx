@@ -1,4 +1,3 @@
-
 // import { useEffect, useState } from "react";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
@@ -149,10 +148,15 @@ export default function ContactSection() {
           className="w-full md:w-1/2 flex flex-col justify-between"
         >
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#6B21A8]">Registrations</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Get in Touch</h2>
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#6B21A8]">
+              Registrations
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Get in Touch
+            </h2>
             <p className="text-gray-600 mb-6 mt-2">
-              Reach out to our coordination team for queries related to participation or support.
+              Reach out to our coordination team for queries related to
+              participation or support.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -160,32 +164,65 @@ export default function ContactSection() {
                 <FaEnvelope className="text-xl text-[#6B21A8] mt-1" />
                 <div className="break-all">
                   <p className="text-sm text-gray-500">General Inquiries</p>
-                  <p className="font-medium text-gray-800">info@juristquest.com</p>
+                  <p className="font-medium text-gray-800">
+                    info@juristquest.com
+                  </p>
+                </div>
+              </div>
+              {/* Mobile version - visible only on mobile */}
+              <div className="block md:hidden">
+                <div className="flex items-start gap-4 bg-gray-100 p-4 rounded-xl shadow-sm min-h-[90px]">
+                  <FaEnvelope className="text-xl text-[#6B21A8] mt-1" />
+                  <div>
+                    <p className="text-sm text-gray-500 leading-tight">
+                      Customer Support
+                    </p>
+                    <p className="font-medium text-gray-800 leading-tight break-words">
+                      customersupport@juristquest.com
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center bg-gray-100 p-4 rounded-xl shadow-sm min-h-[90px]">
-                <div className="text-xl text-[#6B21A8] mr-2 flex-shrink-0">
-                  <FaEnvelope />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-sm text-gray-500 leading-tight">Customer Support</p>
-                  <p className="font-medium text-gray-800 leading-tight">customersupport@juristquest.com</p>
+              {/* Desktop version - visible only on desktop */}
+              <div className="hidden md:block">
+                <div className="flex items-center bg-gray-100 p-4 rounded-xl shadow-sm min-h-[90px]">
+                  <div className="text-xl text-[#6B21A8] mr-2 flex-shrink-0 self-start mt-1">
+                    <FaEnvelope />
+                  </div>
+                  <div className="flex flex-col justify-center -ml-1">
+                    <div className="-mt-3 ml-1">
+                      <p className="text-sm text-gray-500 leading-tight">
+                        Customer Support
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-800 leading-tight break-words -ml-2 mt-1">
+                        customersupport@juristquest.com
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 bg-gray-100 p-4 rounded-xl shadow-sm md:col-span-2 min-h-[90px]">
                 <FaRegHandshake className="text-xl text-[#6B21A8] mt-1" />
                 <div className="break-all">
-                  <p className="text-sm text-gray-500">Sponsorship / Partnership</p>
-                  <p className="font-medium text-gray-800">partners@juristquest.com</p>
+                  <p className="text-sm text-gray-500">
+                    Sponsorship / Partnership
+                  </p>
+                  <p className="font-medium text-gray-800">
+                    partners@juristquest.com
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 bg-gray-100 p-4 rounded-xl shadow-sm min-h-[90px]">
                 <FaPhoneAlt className="text-xl text-[#6B21A8] mt-1" />
                 <div>
-                  <p className="text-sm text-gray-500">General Inquiry / Sponsorship / Partnership</p>
+                  <p className="text-sm text-gray-500">
+                    General Inquiry / Sponsorship / Partnership
+                  </p>
                   <p className="font-medium text-gray-800">+91-9677873855</p>
                 </div>
               </div>
@@ -211,24 +248,24 @@ export default function ContactSection() {
         </div>
 
         {/* Right - Image Section */}
-       {/* Right - Image Section */}
-<div className="relative w-full md:w-1/2 lg:ml-16" data-aos="fade-left">
-  <div className="rounded-xl overflow-hidden shadow-xl w-full">
-    <img
-      src="/assets/court.jpg"
-      alt="Running"
-      className="w-full h-[360px] object-cover rounded-xl"
-    />
-  </div>
-  <div className="absolute bottom-[-30px] left-[-20px] md:bottom-[-40px] md:left-[-40px] w-32 md:w-48 rounded-lg overflow-hidden border-4 border-white shadow-lg">
-    <img
-      src="/assets/hero-11.png"
-      alt="Inset"
-      className="w-full h-24 md:h-36 object-cover"
-    />
-  </div>
-</div>
-</div>
+        {/* Right - Image Section */}
+        <div className="relative w-full md:w-1/2 lg:ml-16" data-aos="fade-left">
+          <div className="rounded-xl overflow-hidden shadow-xl w-full">
+            <img
+              src="/assets/court.jpg"
+              alt="Running"
+              className="w-full h-[360px] object-cover rounded-xl"
+            />
+          </div>
+          <div className="absolute bottom-[-30px] left-[-20px] md:bottom-[-40px] md:left-[-40px] w-32 md:w-48 rounded-lg overflow-hidden border-4 border-white shadow-lg">
+            <img
+              src="/assets/hero-11.png"
+              alt="Inset"
+              className="w-full h-24 md:h-36 object-cover"
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Mobile Form Modal */}
       {/* {showFormMobile && (

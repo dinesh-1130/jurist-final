@@ -22,16 +22,40 @@ export default function Footer() {
       <div className="hidden md:grid max-w-7xl mx-auto grid-cols-3 gap-12 pt-16 pb-8 px-6">
         {/* Left Column */}
         <div className="space-y-4">
-          <img src="/assets/new-logo-2.png" alt="JuristQuest Logo" className="w-40 mb-2" />
+          <img
+            src="/assets/new-logo-2.png"
+            alt="JuristQuest Logo"
+            className="w-40 mb-2"
+          />
           <p className="text-gray-700 max-w-xs">
-            JuristQuest is a premier moot court competition created to elevate the standards.
+            JuristQuest is a premier moot court competition created to elevate
+            the standards.
           </p>
+
           <div className="flex gap-4 mt-4 text-purple-800 text-base">
-            <a href="#" className="hover:text-purple-900 transition"><FaFacebookF /></a>
-            <a href="#" className="hover:text-purple-900 transition"><FaTwitter /></a>
-            <a href="#" className="hover:text-purple-900 transition"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-purple-900 transition"><FaInstagram /></a>
+            <a href="#" className="hover:text-purple-900 transition">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="hover:text-purple-900 transition">
+              <FaTwitter />
+            </a>
+            <a href="#" className="hover:text-purple-900 transition">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" className="hover:text-purple-900 transition">
+              <FaInstagram />
+            </a>
           </div>
+          <p className="text-sm text-gray-600 mt-2">
+            Developed by &nbsp;
+            <a
+              href="https://rocketreach.co/vulture-lines-tech-management-pvt-ltd-management_b702ad1dc4fb8b7d"
+              target="blank"
+              className="text-purple-900 hover:underline "
+            >
+              VULTURE LINES TECH
+            </a>
+          </p>
         </div>
 
         {/* Center Column */}
@@ -41,18 +65,32 @@ export default function Footer() {
               • QUICK LINKS
             </h4>
             <ul className="space-y-2 text-gray-700">
-              <li><a href="/">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#registrations">Registrations</a></li>
-              <li><a href="#rules">Rules & Guidelines</a></li>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#about">About Us</a>
+              </li>
+              <li>
+                <a href="#registrations">Registrations</a>
+              </li>
+              <li>
+                <a href="#rules">Rules & Guidelines</a>
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-3 md:invisible">&nbsp;</h4>
             <ul className="space-y-2 text-gray-700">
-              <li><a href="/aboutus">our partners</a></li>
-              <li><a href="#faqs">FAQ's</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li>
+                <a href="/aboutus">our partners</a>
+              </li>
+              <li>
+                <a href="#faqs">FAQ's</a>
+              </li>
+              <li>
+                <a href="#contact">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -72,7 +110,10 @@ export default function Footer() {
           </div>
           <div className="flex items-start gap-3 text-black">
             <FaMapMarkerAlt className="mt-1 text-purple-800" />
-            <span>7th Floor, Centre Point, 2/4, Mount Pollamallee High Road, Manapakkam, Porur, Chennai, Tamil Nadu 600089</span>
+            <span>
+              7th Floor, Centre Point, 2/4, Mount Pollamallee High Road,
+              Manapakkam, Porur, Chennai, Tamil Nadu 600089
+            </span>
           </div>
         </div>
       </div>
@@ -81,7 +122,11 @@ export default function Footer() {
       <div className="md:hidden px-6 pt-10 pb-6 space-y-6">
         {/* Logo */}
         <div className="flex justify-center">
-          <img src="/assets/new-logo-2.png" alt="JuristQuest Logo" className="w-28" />
+          <img
+            src="/assets/new-logo-2.png"
+            alt="JuristQuest Logo"
+            className="w-28"
+          />
         </div>
 
         {/* Accordion Section */}
@@ -97,13 +142,27 @@ export default function Footer() {
             </button>
             {active === "links" && (
               <ul className="px-4 pb-3 text-gray-700 space-y-2">
-                 <li><a href="/">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#registrations">Registrations</a></li>
-              <li><a href="#rules">Rules & Guidelines</a></li>
-               <li><a href="/aboutus">our partners</a></li>
-              <li><a href="#faqs">FAQ's</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About Us</a>
+                </li>
+                <li>
+                  <a href="#registrations">Registrations</a>
+                </li>
+                <li>
+                  <a href="#rules">Rules & Guidelines</a>
+                </li>
+                <li>
+                  <a href="/aboutus">our partners</a>
+                </li>
+                <li>
+                  <a href="#faqs">FAQ's</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact Us</a>
+                </li>
               </ul>
             )}
           </div>
@@ -138,9 +197,19 @@ export default function Footer() {
             </button>
             {active === "contact" && (
               <div className="px-4 pb-3 text-gray-700 space-y-3">
-                <div className="flex items-start gap-2"><FaPhoneAlt className="mt-1 text-purple-800" />+91-9677883855</div>
-                <div className="flex items-start gap-2"><FaEnvelope className="mt-1 text-purple-800" /> info@juristquest.com</div>
-                <div className="flex items-start gap-2"><FaMapMarkerAlt className="mt-1 text-purple-800" /> 7th Floor, Centre Point, 2/4, Mount Pollamallee High Road, Manapakkam, Porur, Chennai, Tamil Nadu 600089</div>
+                <div className="flex items-start gap-2">
+                  <FaPhoneAlt className="mt-1 text-purple-800" />
+                  +91-9677883855
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaEnvelope className="mt-1 text-purple-800" />{" "}
+                  info@juristquest.com
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaMapMarkerAlt className="mt-1 text-purple-800" /> 7th Floor,
+                  Centre Point, 2/4, Mount Pollamallee High Road, Manapakkam,
+                  Porur, Chennai, Tamil Nadu 600089
+                </div>
               </div>
             )}
           </div>
@@ -156,19 +225,38 @@ export default function Footer() {
             </button>
             {active === "social" && (
               <div className="flex justify-center gap-4 px-4 pb-4 text-purple-800 text-lg">
-                <a href="#"><FaFacebookF /></a>
-                <a href="#"><FaTwitter /></a>
-                <a href="#"><FaLinkedinIn /></a>
-                <a href="#"><FaInstagram /></a>
+                <a href="#">
+                  <FaFacebookF />
+                </a>
+                <a href="#">
+                  <FaTwitter />
+                </a>
+                <a href="#">
+                  <FaLinkedinIn />
+                </a>
+                <a href="#">
+                  <FaInstagram />
+                </a>
               </div>
             )}
           </div>
         </div>
+        <p className="text-sm text-gray-600 mt-2 text-center">
+          Developed by &nbsp;
+          <a
+            href="https://rocketreach.co/vulture-lines-tech-management-pvt-ltd-management_b702ad1dc4fb8b7d"
+            target="_blank"
+            className="text-purple-900 hover:underline"
+          >
+            VULTURE LINES TECH
+          </a>
+        </p>
       </div>
 
       {/* Bottom Line */}
       <div className="text-center text-xs text-gray-500 border-t border-gray-200 py-4">
-        © {new Date().getFullYear()} Jurist Quest. All rights reserved.
+        © {new Date().getFullYear()} Jurist Quest - A product of Crosby Law
+        Associates and copyright reserved for Crosby Law Associates only.
       </div>
     </footer>
   );

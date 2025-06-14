@@ -343,7 +343,7 @@ const PartnersPage = () => {
       partners: [
         {
           name: "Vulturelines",
-          logo: "/assets/vulture_lines_logo.jpg",
+          logo: "/assets/vulture.jpg",
           bgColor: "bg-violet-50",
         },
       ],
