@@ -168,31 +168,31 @@ import "swiper/css/pagination";
 
 const mootCourtCommittee = [
   {
-    name: "Mr.Sanidhya ",
-    title: "JuristQuest – Moot Court Committee\nmember\nAdvocate ",
-    image: "/assets/profile-20.jpeg", // Make sure this path is correct
+    name: "Mr. ANANDH KUMAR V M.L(Business Law)., Ph.D in Law",
+    title: "JuristQuest - Moot committee Lead\nAcademician-Advocate",
+    image: "/assets/anand.jpeg",
   },
   {
-    name: "Mr. ANANDH KUMAR V M.L(Business Law)., Ph.D in Law",
-    title: "JuristQuest - Mootcourt committee Lead\nAcademician\nAdvocate",
-    image: "/assets/anand.jpeg",
+    name: "Mr.Sanidhya ",
+    title: "JuristQuest – Moot Committee member\nAdvocate ",
+    image: "/assets/profile-20.jpeg", // Make sure this path is correct
   },
 
   {
     name: "Ms. Lisha R",
-    title: "JuristQuest - Mootcourt committee\nmember\n Advocate ",
+    title: "JuristQuest - Mootcourt committee member\nAdvocate ",
     image: "/assets/profile-26.jpeg",
   },
 
   {
     name: "Sneha Padmanaban BBA LL.B (Hons).",
-    title: "JuristQuest - Moot Marathon Coordinator ",
+    title: "JuristQuest - Moot Committee Coordinator ",
     image: "/assets/SnehaPadmanaban.jpeg",
   },
 
   {
     name: "NEERAJA C REDDY V B.A.LLB(hons)",
-    title: "JuristQuest - Moot Marathon Coordinator ",
+    title: "JuristQuest - Moot Committee Coordinator ",
     image: "/assets/reddy.jpeg",
   },
 ];
@@ -215,8 +215,16 @@ const organizingCommittee = [
     title: "JuristQuest – Organizing Committee Head\nManaging Partner - CLA  ",
     image: "/assets/Revathi-2.png",
   },
-  { name: "Mr. Suresh P", title: "JuristQuest – Organizing Committee Member " },
-  { name: "Mr. Sarath", title: "JuristQuest – Organizing Committee Member" },
+  {
+    name: "Mr. Suresh P",
+    title: "JuristQuest – Organizing Committee Member\nBTS Representative ",
+  },
+  {
+    name: "Mr. Sarath",
+    title:
+      "JuristQuest – Organizing Committee Member\nSr. Manager Operations - CLA",
+    image: "/assets/sarath.jpeg",
+  },
 
   { name: "Mr. Dinesh", title: "JuristQuest – Organizing Committee Member" },
 ];
