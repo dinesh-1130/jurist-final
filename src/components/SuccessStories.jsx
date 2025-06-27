@@ -210,6 +210,10 @@ const organizingCommittee = [
       "JuristQuest – Organizing Committee Member\nMarketing Head - Vulturelines",
     image: "/assets/sam-3.png",
   },
+  {
+    name: "Ms. Revathi Prasad",
+    title: "JuristQuest – Organizing Committee Head\nManaging Partner - CLA  ",
+  },
   { name: "Mr. Suresh P", title: "JuristQuest – Organizing Committee Member " },
   { name: "Mr. Sarath", title: "JuristQuest – Organizing Committee Member" },
 
