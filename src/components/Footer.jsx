@@ -47,13 +47,13 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-sm text-gray-600 mt-2">
-            Developed by &nbsp;
+            Designed And Developed By &nbsp;
             <a
-              href="https://rocketreach.co/vulture-lines-tech-management-pvt-ltd-management_b702ad1dc4fb8b7d"
+              href="https://vulturelines.com/"
               target="blank"
               className="text-purple-900 hover:underline "
             >
-              VULTURE LINES TECH
+              VLT
             </a>
           </p>
         </div>
@@ -242,13 +242,13 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-sm text-gray-600 mt-2 text-center">
-          Developed by &nbsp;
+          Designed And Developed By &nbsp;
           <a
-            href="https://rocketreach.co/vulture-lines-tech-management-pvt-ltd-management_b702ad1dc4fb8b7d"
+            href="https://vulturelines.com/"
             target="_blank"
             className="text-purple-900 hover:underline"
           >
-            VULTURE LINES TECH
+            VLT
           </a>
         </p>
       </div>

@@ -343,7 +343,7 @@ const PartnersPage = () => {
       partners: [
         {
           name: "Vulturelines",
-          logo: "/assets/vulture.jpg",
+          logo: "/assets/vulture_lines_logo.jpg",
           bgColor: "bg-violet-50",
         },
       ],
@@ -390,8 +390,9 @@ const PartnersPage = () => {
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="w-16 h-16 mx-auto mb-4 object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="w-28 h-28 mx-auto mb-4 object-contain transition-transform duration-300 group-hover:scale-110"
                       />
+
                       <h4 className="text-lg font-bold text-gray-800 leading-tight">
                         {partner.name}
                       </h4>

@@ -83,8 +83,10 @@ export default function HeroSection() {
         <div className="absolute inset-0 z-10 flex flex-col justify-start items-start sm:justify-center sm:items-start pt-[30vh] sm:pt-0 px-6 sm:px-12 text-white text-left">
           <div className="max-w-3xl w-full" data-aos="fade-up">
             <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold leading-tight mb-4">
-               WELCOME TO  <br />
-              <span className="text-3xl sm:text-3xl md:text-6xl">JURISTQUEST 2025</span>
+              WELCOME TO <br />
+              <span className="text-3xl sm:text-3xl md:text-6xl">
+                JURISTQUEST 2025
+              </span>
             </h1>
 
             <p
@@ -107,9 +109,10 @@ export default function HeroSection() {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              Conceptualized by Crosby Law Associates in association with RK Legal Partners
+              Conceptualized by Crosby Law Associates in association with
               <br className="hidden sm:block" />
-              (Mr. Krishna Kumar, Secretary of Madras High Court Advocates Association)
+              (Mr. Krishna Kumar, Secretary of Madras High Court Advocates
+              Association)
             </p>
           </div>
         </div>
