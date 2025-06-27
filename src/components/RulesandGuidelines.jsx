@@ -198,7 +198,7 @@ const RulesSection = () => {
   return (
     <section className="relative bg-white py-20 px-4 font-['Lato']">
       {/* Top right corner buttons */}
-      <div className="absolute top-6 right-6 z-10 flex gap-4">
+      <div className="hidden sm:flex absolute top-28 right-6 z-10 gap-4">
         <button
           onClick={() => setShowFlipbook(true)}
           className="flex items-center gap-2 px-4 py-2 bg-purple-800 text-white rounded hover:bg-purple-800"
