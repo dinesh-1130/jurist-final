@@ -226,7 +226,11 @@ const organizingCommittee = [
     image: "/assets/sarath.jpeg",
   },
 
-  { name: "Mr. Dinesh", title: "JuristQuest – Organizing Committee Member" },
+  {
+    name: "Mr. Dinesh",
+    title: "JuristQuest – Organizing Committee Member",
+    image: "/assets/dinesh.jpeg",
+  },
 ];
 
 export default function TeamSection() {
