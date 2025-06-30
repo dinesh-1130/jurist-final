@@ -199,6 +199,11 @@ const mootCourtCommittee = [
 
 const organizingCommittee = [
   {
+    name: "Ms. Revathi Prasad",
+    title: "JuristQuest – Organizing Committee Head\nManaging Partner - CLA  ",
+    image: "/assets/Revathi-2.png",
+  },
+  {
     name: "Mr. Sutheesh S ",
     title:
       "JuristQuest – Organizing Committee Member\nManaging Director - Vulturelines",
@@ -210,15 +215,7 @@ const organizingCommittee = [
       "JuristQuest – Organizing Committee Member\nMarketing Head - Vulturelines",
     image: "/assets/sam-3.png",
   },
-  {
-    name: "Ms. Revathi Prasad",
-    title: "JuristQuest – Organizing Committee Head\nManaging Partner - CLA  ",
-    image: "/assets/Revathi-2.png",
-  },
-  {
-    name: "Mr. Suresh P",
-    title: "JuristQuest – Organizing Committee Member\nBTS Representative ",
-  },
+
   {
     name: "Mr. Sarath",
     title:

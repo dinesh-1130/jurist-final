@@ -1,21 +1,19 @@
-@import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-@import "react-pdf/dist/esm/Page/TextLayer.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden !important;
@@ -50,3 +48,4 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
