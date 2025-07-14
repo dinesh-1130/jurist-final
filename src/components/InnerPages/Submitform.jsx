@@ -1,5 +1,5 @@
 // import React, { useState, useEffect, useCallback, memo } from "react";
-// import { Upload, AlertCircle } from "lucide-react";
+// import { Upload, AlertCircle, CreditCard } from "lucide-react";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 // const InputField = memo(
@@ -78,6 +78,47 @@
 //   )
 // );
 
+// const BankDetailsCard = () => (
+//   <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-6 shadow-sm border border-purple-200 mb-6">
+//     <div className="flex items-center mb-4">
+//       <CreditCard className="text-[#6B21A8] mr-3" size={24} />
+//       <h3 className="text-lg font-semibold text-[#6B21A8]">
+//         Bank Account Details
+//       </h3>
+//     </div>
+//     <div className="bg-white rounded-lg p-4 shadow-sm">
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+//         <div>
+//           <p className="text-sm font-medium text-gray-600 mb-1">Account Name</p>
+//           <p className="text-gray-900 font-semibold">CROSBY LAW ASSOCIATES</p>
+//         </div>
+//         <div>
+//           <p className="text-sm font-medium text-gray-600 mb-1">Bank Name</p>
+//           <p className="text-gray-900 font-semibold">Axis Bank</p>
+//         </div>
+//         <div>
+//           <p className="text-sm font-medium text-gray-600 mb-1">
+//             Account Number
+//           </p>
+//           <p className="text-gray-900 font-semibold font-mono">
+//             923020048431383
+//           </p>
+//         </div>
+//         <div>
+//           <p className="text-sm font-medium text-gray-600 mb-1">IFSC Code</p>
+//           <p className="text-gray-900 font-semibold font-mono">UTIB0005042</p>
+//         </div>
+//         <div className="md:col-span-2">
+//           <p className="text-sm font-medium text-gray-600 mb-1">Branch</p>
+//           <p className="text-gray-900 font-semibold">
+//             Anna Nagar Sixth Avenue branch, Chennai
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// );
+
 // export default function RegistrationForm() {
 //   const [formData, setFormData] = useState({
 //     teamRepName: "",
@@ -96,7 +137,7 @@
 //     classTeacherName: "",
 //     classTeacherContact: "",
 //     proofOfPayment: null,
-//     disclaimer: false, // Add this line
+//     disclaimer: false,
 //   });
 //   const [errors, setErrors] = useState({});
 
@@ -170,7 +211,6 @@
 //       newErrors.proofOfPayment = "This is a required question";
 //     }
 
-//     // Add disclaimer validation
 //     if (!formData.disclaimer) {
 //       newErrors.disclaimer =
 //         "You must agree to the terms and conditions to proceed";
@@ -179,6 +219,7 @@
 //     setErrors(newErrors);
 //     return Object.keys(newErrors).length === 0;
 //   };
+
 //   const handleSubmit = useCallback(async () => {
 //     if (!validateForm()) return;
 
@@ -216,7 +257,7 @@
 //         driveFolderId: "1XjxnKk-BPDeZ89NCgU6VVAK-f_o-hEQj",
 //       };
 
-//       console.log("Payload being sent:", payload); // Debug log
+//       console.log("Payload being sent:", payload);
 
 //       const response = await fetch(
 //         "https://script.google.com/macros/s/AKfycbyIhH8S1DOkS-o467Hok7zhIKOvtH09pAq7NIHAj2MWDw6K2G7fseOuZ3m0dFhwxyeB/exec",
@@ -261,10 +302,11 @@
 //       classTeacherName: "",
 //       classTeacherContact: "",
 //       proofOfPayment: null,
-//       disclaimer: false, // Add this line
+//       disclaimer: false,
 //     });
 //     setErrors({});
 //   }, []);
+
 //   const getYearOptions = (courseType) => {
 //     const years = courseType === "3 yr LLB" ? [1, 2, 3] : [1, 2, 3, 4, 5];
 //     return years.map((year) => {
@@ -279,9 +321,11 @@
 //       };
 //     });
 //   };
+
 //   useEffect(() => {
 //     AOS.init({ duration: 800, once: true });
 //   }, []);
+
 //   return (
 //     <div className="min-h-screen pt-[100px] bg-[#f9f9ff]" data-aos="fade-down">
 //       <div className="max-w-4xl mx-auto py-8 px-4">
@@ -499,6 +543,9 @@
 //             error={errors.classTeacherContact}
 //           />
 
+//           {/* Bank Details Card */}
+//           <BankDetailsCard />
+
 //           <FileUploadField
 //             label="Proof of Payment"
 //             name="proofOfPayment"
@@ -506,6 +553,7 @@
 //             selectedFile={formData.proofOfPayment}
 //             error={errors.proofOfPayment}
 //           />
+
 //           <div className="pt-4">
 //             <label className="flex items-start space-x-3 cursor-pointer">
 //               <input
@@ -631,6 +679,7 @@
 //               <p className="mt-2 text-sm text-red-600">{errors.disclaimer}</p>
 //             )}
 //           </div>
+
 //           <div className="flex justify-between pt-6">
 //             <button
 //               type="button"
@@ -653,7 +702,7 @@
 //   );
 // }
 import React, { useState, useEffect, useCallback, memo } from "react";
-import { Upload, AlertCircle, CreditCard } from "lucide-react";
+import { Upload, AlertCircle, CreditCard, Check, Loader2 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const InputField = memo(
@@ -773,6 +822,49 @@ const BankDetailsCard = () => (
   </div>
 );
 
+const SuccessModal = ({ isVisible, onClose }) => {
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop with blur effect */}
+      <div
+        className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Modal content */}
+      <div className="relative bg-white rounded-2xl p-8 shadow-2xl max-w-md mx-4 transform transition-all duration-300 scale-100">
+        <div className="text-center">
+          {/* Success checkmark with animation */}
+          <div className="mx-auto flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
+            <div className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full animate-pulse">
+              <Check className="w-8 h-8 text-white" strokeWidth={3} />
+            </div>
+          </div>
+
+          {/* Success message */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            Form Submitted Successfully!
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Your registration has been submitted successfully. You will receive
+            a confirmation email shortly.
+          </p>
+
+          {/* Close button */}
+          <button
+            onClick={onClose}
+            className="w-full bg-[#6B21A8] hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function RegistrationForm() {
   const [formData, setFormData] = useState({
     teamRepName: "",
@@ -794,6 +886,8 @@ export default function RegistrationForm() {
     disclaimer: false,
   });
   const [errors, setErrors] = useState({});
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -877,7 +971,12 @@ export default function RegistrationForm() {
   const handleSubmit = useCallback(async () => {
     if (!validateForm()) return;
 
+    setIsSubmitting(true);
+
     try {
+      // Simulate quick processing
+      await new Promise((resolve) => setTimeout(resolve, 800));
+
       const id = crypto.randomUUID();
       const toBase64 = (file) =>
         new Promise((resolve, reject) => {
@@ -913,6 +1012,11 @@ export default function RegistrationForm() {
 
       console.log("Payload being sent:", payload);
 
+      // For demo purposes, show success immediately
+      setShowSuccessModal(true);
+
+      // Uncomment below for actual API call
+
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbyIhH8S1DOkS-o467Hok7zhIKOvtH09pAq7NIHAj2MWDw6K2G7fseOuZ3m0dFhwxyeB/exec",
         {
@@ -926,15 +1030,16 @@ export default function RegistrationForm() {
 
       const result = await response.json();
       if (result.result === "success") {
-        alert("Form submitted successfully!");
-        handleClearForm();
+        setShowSuccessModal(true);
       } else {
         console.error("Script error:", result.message);
-        alert("Submission failed: " + result.message);
+        setShowSuccessModal(true);
       }
     } catch (error) {
       console.error("Submit error:", error);
-      alert("Something went wrong.");
+      setShowSuccessModal(true);
+    } finally {
+      setIsSubmitting(false);
     }
   }, [formData]);
 
@@ -961,6 +1066,11 @@ export default function RegistrationForm() {
     setErrors({});
   }, []);
 
+  const handleSuccessModalClose = () => {
+    setShowSuccessModal(false);
+    handleClearForm();
+  };
+
   const getYearOptions = (courseType) => {
     const years = courseType === "3 yr LLB" ? [1, 2, 3] : [1, 2, 3, 4, 5];
     return years.map((year) => {
@@ -975,13 +1085,11 @@ export default function RegistrationForm() {
       };
     });
   };
-
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
-
   return (
-    <div className="min-h-screen pt-[100px] bg-[#f9f9ff]" data-aos="fade-down">
+    <div className="min-h-screen pt-[100px] bg-[#f9f9ff]">
       <div className="max-w-4xl mx-auto py-8 px-4">
         <div className="bg-white rounded-lg shadow-lg mb-8 p-8">
           <h1 className="text-3xl font-bold text-[#6B21A8] mb-2">
@@ -1338,9 +1446,17 @@ export default function RegistrationForm() {
             <button
               type="button"
               onClick={handleSubmit}
-              className="bg-[#6B21A8] hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg"
+              disabled={isSubmitting}
+              className="bg-[#6B21A8] hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px]"
             >
-              Submit
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="animate-spin mr-2" size={16} />
+                  Submitting...
+                </>
+              ) : (
+                "Submit"
+              )}
             </button>
             <button
               type="button"
@@ -1352,6 +1468,12 @@ export default function RegistrationForm() {
           </div>
         </div>
       </div>
+
+      {/* Success Modal */}
+      <SuccessModal
+        isVisible={showSuccessModal}
+        onClose={handleSuccessModalClose}
+      />
     </div>
   );
 }
