@@ -119,12 +119,12 @@ export default function About() {
             className="h-full max-w-[300px] w-full rounded-xl overflow-hidden"
             data-aos="fade-right"
           >
-           <img
-  src={BannerBg}
-  loading="lazy"
-  alt="Banner bg"
-  className="h-[350px] w-full object-cover rounded-xl"
-/>
+            <img
+              src={BannerBg}
+              loading="lazy"
+              alt="Banner bg"
+              className="h-[350px] w-full object-cover rounded-xl"
+            />
           </div>
         </div>
 
@@ -136,48 +136,54 @@ export default function About() {
             data-aos="fade-up"
             className="text-[2em] lg:text-[2.5em] xl:text-[3em] font-semibold tracking-tighter leading-[1.14] mb-0"
           >
-             Welcome to <span style={{ color: "#6B21A8" }}>“JuristQuest 2025”</span> 
+            Welcome to{" "}
+            <span style={{ color: "#6B21A8" }}>“JuristQuest 2025”</span>
           </h2>
           <p
             data-aos="fade-up"
             className="text-base tracking-tight font-medium text-gray-800"
           >
-            India’s Most Ambitious & Prestigious Moot Court Challenge Begins Here...
+            India’s Most Ambitious & Prestigious Moot Court Challenge Begins
+            Here...
           </p>
           <p
             data-aos="fade-up"
             className="text-base text-gray-700 font-normal leading-relaxed"
           >
-            Step into the future of legal advocacy with JuristQuest 2025 – a groundbreaking
-            initiative redefining the landscape of moot court competitions in India. As the
-            nation’s first-ever moot court marathon, JuristQuest is more than just a competition;
-            it is a celebration of potential, perseverance, and passion for the law.
+            Step into the future of legal advocacy with JuristQuest 2025 – a
+            groundbreaking initiative redefining the landscape of moot court
+            competitions in India. As the nation’s first-ever moot court
+            marathon, JuristQuest is more than just a competition; it is a
+            celebration of potential, perseverance, and passion for the law.
           </p>
           <p
             data-aos="fade-up"
             className="text-base text-gray-700 font-normal leading-relaxed"
           >
-            This pioneering event brings together not only the brightest legal minds from across
-            the country but also opens its doors to all budding law students—from every corner of
-            India, regardless of language, medium, or background. JuristQuest is designed to offer
-            an inclusive platform for those taking their first step into advocacy, encouraging
-            every voice that seeks to be heard in the courtroom.
+            This pioneering event brings together not only the brightest legal
+            minds from across the country but also opens its doors to all
+            budding law students—from every corner of India, regardless of
+            language, medium, or background. JuristQuest is designed to offer an
+            inclusive platform for those taking their first step into advocacy,
+            encouraging every voice that seeks to be heard in the courtroom.
           </p>
           <p
             data-aos="fade-up"
             className="text-base text-gray-700 font-normal leading-relaxed"
           >
-            With a unique format that blends the intensity of a moot court with the stamina of a
-            marathon, participants will be challenged on their skills, strategic thinking, and
-            ability to thrive under pressure—preparing them for the real-world demands of legal
+            With a unique format that blends the intensity of a moot court with
+            the stamina of a marathon, participants will be challenged on their
+            skills, strategic thinking, and ability to thrive under
+            pressure—preparing them for the real-world demands of legal
             practice.
           </p>
           <p
             data-aos="fade-up"
             className="text-base text-gray-700 font-normal leading-relaxed"
           >
-            Join us in shaping a more inclusive and vibrant legal community. JuristQuest 2025 is
-            not just a competition—it’s your gateway to the world of advocacy.
+            Join us in shaping a more inclusive and vibrant legal community.
+            JuristQuest 2025 is not just a competition—it’s your gateway to the
+            world of advocacy.
           </p>
           <div className="flex justify-start items-start w-full">
             <button
@@ -203,22 +209,28 @@ export default function About() {
         <div className="relative z-20 max-w-md mx-auto text-white text-center px-4">
           <h2 className="text-xl font-bold mb-3">About JuristQuest</h2>
           <p className="text-sm mb-3">
-            🌟 Welcome to <span className="text-purple-300 font-semibold">“JuristQuest 2025”</span> 🌟
+            🌟 Welcome to{" "}
+            <span className="text-purple-300 font-semibold">
+              “JuristQuest 2025”
+            </span>{" "}
+            🌟
           </p>
           <p className="text-sm mb-3">
-            India’s Most Ambitious & Prestigious Moot Court Challenge Begins Here...
+            India’s Most Ambitious & Prestigious Moot Court Challenge Begins
+            Here...
           </p>
           <p className="text-xs text-gray-200 mb-3">
-            JuristQuest 2025 is redefining legal competitions with a one-of-a-kind moot court
-            marathon that celebrates every aspiring advocate in India—regardless of background.
+            JuristQuest 2025 is redefining legal competitions with a
+            one-of-a-kind moot court marathon that celebrates every aspiring
+            advocate in India—regardless of background.
           </p>
           <p className="text-xs text-gray-200 mb-3">
-            Join this inclusive platform that builds your real-world legal acumen through challenge,
-            skill, and passion.
+            Join this inclusive platform that builds your real-world legal
+            acumen through challenge, skill, and passion.
           </p>
           <p className="text-xs text-gray-200 mb-4">
-            Conceptualized by Crosby Law Associates & RK Legal Partners in association with the
-            Madras High Court Advocates Association.
+            Conceptualized by Crosby Law Associates & RK Legal Partners in
+            association with the Madras High Court Advocates Association.
           </p>
           <button
             onClick={() => navigate("#contactus")}

@@ -7,18 +7,18 @@ import Registrations from "./components/Registrations";
 // import Posts from './components/Posts';
 import ContactUs from "./components/ContactUs";
 import RulesandGuidelines from "./components/RulesandGuidelines";
-import SocialResponsibility from "./components/SocialResponsibility";
+import OurTeam from "./components/OurTeam";
 import FAQChat from "./components/FAQChat";
 import About from "./components/About";
-import TrustedBy from "./components/TrustedBy";
+import OurvisionMision from "./components/OurvisionMision";
 import Whoweare from "./components/Whoweare";
 // Inner Pages
 
-import Aboutus from "./components/InnerPages/Aboutus";
+import OurPartners from "./components/InnerPages/OurPartners";
 import Submitform from "./components/InnerPages/Submitform";
 
-import SuccessStories from "./components/SuccessStories";
-
+import CommitteeMembers from "./components/CommitteeMembers";
+import Invoice from "./components/InnerPages/Invoice";
 import { useEffect } from "react";
 
 function Home() {
@@ -32,7 +32,7 @@ function Home() {
         <About />
       </div>
 
-      <TrustedBy />
+      <OurvisionMision />
 
       <div id="registrations">
         <Registrations />
@@ -44,9 +44,9 @@ function Home() {
         <RulesandGuidelines />
       </div>
 
-      <SocialResponsibility />
+      <OurTeam />
 
-      <SuccessStories />
+      <CommitteeMembers />
 
       {/* <div id="faqs">
         <FAQ />
@@ -70,8 +70,9 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/our-partners" element={<Aboutus />} />
+          <Route path="/our-partners" element={<OurPartners />} />
           <Route path="/contact-form" element={<Submitform />} />
+          <Route path="/invoice" element={<Invoice />} />
         </Routes>
         <Footer />
       </div>
