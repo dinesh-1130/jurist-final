@@ -706,6 +706,9 @@ import {
 import "swiper/css";
 import HTMLFlipBook from "react-pageflip";
 import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+
 import flipSound from "/assets/flip.mp3";
 import pdfFile from "/assets/jurist-2.pdf";
 
