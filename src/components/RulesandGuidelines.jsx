@@ -710,7 +710,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 
 import flipSound from "/assets/flip.mp3";
-import pdfFile from "/assets/jurist-2.pdf";
+import pdfFile from "/assets/new-pdf1.pdf";
 
 // Set worker for react-pdf
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
