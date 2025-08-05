@@ -69,7 +69,6 @@ const PartnersPage = () => {
 
       {/* Partners Section */}
       <div className="max-w-6xl mx-auto px-6 py-12">
-        {/* Desktop Version - All Partners Visible */}
         <div className="hidden md:block">
           {/* Titles Row */}
           <div className="px-8 py-8">
@@ -195,8 +194,6 @@ const PartnersPage = () => {
           </div>
         </div>
       </div>
-
-      {/* CTA Section */}
     </div>
   );
 };

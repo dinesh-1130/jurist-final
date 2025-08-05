@@ -12,19 +12,23 @@ const VisionMission = () => {
     <>
       {/* Desktop & Tablet Layout */}
       <div className="hidden md:grid max-w-[1440px] mx-auto px-4 py-20 grid-cols-1 md:grid-cols-3 gap-10">
-        {[{
-          icon: <FaEye />,
-          title: "Our Vision",
-          text: "To establish JuristQuest as India’s most prestigious moot court competition, recognized nationally and internationally for excellence in legal advocacy and education.",
-        }, {
-          icon: <FaBullseye />,
-          title: "Our Mission",
-          text: "To provide a competitive, structured environment that sharpens students’ skills in legal research, drafting and oral advocacy through real-world simulations.",
-        }, {
-          icon: <FaGavel />,
-          title: "What we do",
-          text: "We offer national exposure, global immersion programs (Singapore & Malaysia – 2025), and networking with senior advocates, judges, and legal scholars.",
-        }].map((item, index) => (
+        {[
+          {
+            icon: <FaEye />,
+            title: "Our Vision",
+            text: "To establish JuristQuest as India’s most prestigious moot court competition, recognized nationally and internationally for excellence in legal advocacy and education.",
+          },
+          {
+            icon: <FaBullseye />,
+            title: "Our Mission",
+            text: "To provide a competitive, structured environment that sharpens students’ skills in legal research, drafting and oral advocacy through real-world simulations.",
+          },
+          {
+            icon: <FaGavel />,
+            title: "What we do",
+            text: "We offer national exposure, global immersion programs (Singapore & Malaysia – 2025), and networking with senior advocates, judges, and legal scholars.",
+          },
+        ].map((item, index) => (
           <div
             key={index}
             data-aos="fade-up"
@@ -38,10 +42,15 @@ const VisionMission = () => {
             >
               {item.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-4" style={{ color: "#6B21A8" }}>
+            <h3
+              className="text-xl font-semibold mb-4"
+              style={{ color: "#6B21A8" }}
+            >
               {item.title}
             </h3>
-            <p className="text-gray-700 mb-4 text-sm leading-relaxed">{item.text}</p>
+            <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              {item.text}
+            </p>
             {/* <a
               href="/register"
               className="font-medium hover:underline"
@@ -55,19 +64,23 @@ const VisionMission = () => {
 
       {/* Alternative Premium Mobile Layout */}
       <div className="md:hidden px-4 py-16 space-y-10 bg-[#f5f5f5]">
-        {[{
-          icon: <FaEye />,
-          title: "Our Vision",
-          text: "To establish JuristQuest as India’s most prestigious moot court competition, recognized nationally and internationally for excellence in legal advocacy and education.",
-        }, {
-          icon: <FaBullseye />,
-          title: "Our Mission",
-          text: "To provide a competitive, structured environment that sharpens students’ skills in legal research, drafting and oral advocacy through real-world simulations.",
-        }, {
-          icon: <FaGavel />,
-          title: "What we do",
-          text: "We offer national exposure, global immersion programs (Singapore & Malaysia – 2025), and networking with senior advocates, judges, and legal scholars.",
-        }].map((item, index) => (
+        {[
+          {
+            icon: <FaEye />,
+            title: "Our Vision",
+            text: "To establish JuristQuest as India’s most prestigious moot court competition, recognized nationally and internationally for excellence in legal advocacy and education.",
+          },
+          {
+            icon: <FaBullseye />,
+            title: "Our Mission",
+            text: "To provide a competitive, structured environment that sharpens students’ skills in legal research, drafting and oral advocacy through real-world simulations.",
+          },
+          {
+            icon: <FaGavel />,
+            title: "What we do",
+            text: "We offer national exposure, global immersion programs (Singapore & Malaysia – 2025), and networking with senior advocates, judges, and legal scholars.",
+          },
+        ].map((item, index) => (
           <div
             key={index}
             data-aos="fade-up"
