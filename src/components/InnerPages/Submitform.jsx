@@ -292,6 +292,7 @@ export default function RegistrationForm() {
     classTeacherName: "",
     classTeacherContact: "",
     proofOfPayment: null,
+    reference: "",
     disclaimer: false,
   });
   const [errors, setErrors] = useState({});
@@ -428,7 +429,7 @@ export default function RegistrationForm() {
       setShowSuccessModal(true);
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzChVhj8dYGiO7MvbgKLNsxMjRu_YlZV6ZDXZMPX1OPVeRmc6PWiTRYYT-jzdi2-mwJ/exec",
+        "https://script.google.com/macros/s/AKfycbwl3QiBfsz8ONCdgHK96lNiliQlWnKdguU6NHqQO25V_8hGJ2zh42wjNM6eiqDE12N2/exec",
         {
           method: "POST",
           headers: {
@@ -473,6 +474,7 @@ export default function RegistrationForm() {
       classTeacherName: "",
       classTeacherContact: "",
       proofOfPayment: null,
+      reference: "",
       disclaimer: false,
     });
     setErrors({});
@@ -736,7 +738,7 @@ export default function RegistrationForm() {
           />
 
           {/* Bank Details Card */}
-          <BankDetailsCard />
+          {/* <BankDetailsCard /> */}
 
           {/* QR Code Card */}
           <QRCodeCard onQRClick={() => setShowQRModal(true)} />
@@ -748,7 +750,15 @@ export default function RegistrationForm() {
             selectedFile={formData.proofOfPayment}
             error={errors.proofOfPayment}
           />
-
+          <InputField
+            label="Reference (Optional)"
+            name="reference"
+            required={false}
+            placeholder="Enter reference if any"
+            value={formData.reference}
+            onChange={handleInputChange}
+            error={errors.reference}
+          />
           <div className="pt-4">
             <label className="flex items-start space-x-3 cursor-pointer">
               <input
