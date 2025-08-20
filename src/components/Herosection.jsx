@@ -360,8 +360,8 @@ export default function HeroSection() {
 
       {/*  Popup Modal - Desktop, Mobile optimized */}
       {showPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative bg-white rounded-xl shadow-2xl max-w-[98vw] sm:max-w-2xl w-full mx-2 sm:mx-4 overflow-hidden transform animate-popup max-h-[95vh] sm:max-h-auto overflow-y-auto sm:overflow-visible">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-1 sm:p-4 bg-black/50 backdrop-blur-sm">
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-[98vw] sm:max-w-2xl w-full mx-1 sm:mx-4 overflow-hidden transform animate-popup h-[85vh] xs:h-[90vh] sm:h-auto sm:max-h-auto overflow-y-auto sm:overflow-visible">
             <button
               onClick={closePopup}
               className="absolute top-2 right-2 sm:top-3 sm:right-3 z-20 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600"
