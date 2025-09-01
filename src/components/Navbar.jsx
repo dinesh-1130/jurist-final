@@ -102,7 +102,7 @@ export default function Navbar() {
               href="/#rules"
               className="hover:text-[#6B21A8] transition-colors"
             >
-              Rules & Guidelines
+              Brochure & Mootmemorials
             </a>
           </li>
           <li>
@@ -200,7 +200,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="hover:text-[#6B21A8] transition-colors block"
               >
-                Rules & Guidelines
+                Brochure & Mootmemorials
               </a>
             </li>
             <li>

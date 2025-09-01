@@ -113,7 +113,7 @@ const RulesSection = () => {
       </div>
 
       <div className="text-sm font-semibold mb-2 text-purple-800">
-        Rules & Guidelines
+        Brochure & Mootmemorials
       </div>
       <h2 className="text-2xl md:text-3xl font-bold text-black mb-10">
         Registrations Open for JuristQuest 2025
