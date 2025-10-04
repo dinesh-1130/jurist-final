@@ -3,17 +3,17 @@ import { X, Gift, Users, Target, Award } from "lucide-react";
 
 export default function HeroSection() {
   const scrollRef = useRef(null);
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  useEffect(() => {
-    // Show popup after a short delay when component mounts
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 1000);
+  // useEffect(() => {
+  //   // Show popup after a short delay when component mounts
+  //   const timer = setTimeout(() => {
+  //     setShowPopup(true);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     // Set image as loaded immediately to avoid delay
@@ -24,9 +24,9 @@ export default function HeroSection() {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+  // const closePopup = () => {
+  //   setShowPopup(false);
+  // };
 
   return (
     <>
@@ -94,243 +94,8 @@ export default function HeroSection() {
       </section>
 
       {/*  Popup Modal - Desktop, Mobile optimized */}
-      {showPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-1 sm:p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative bg-white rounded-xl shadow-2xl max-w-[98vw] sm:max-w-2xl w-full mx-1 sm:mx-4 overflow-hidden transform animate-popup h-[85vh] xs:h-[90vh] sm:h-auto sm:max-h-auto overflow-y-auto sm:overflow-visible">
-            <button
-              onClick={closePopup}
-              className="absolute top-2 right-2 sm:top-3 sm:right-3 z-20 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600"
-            >
-              <X size={16} />
-            </button>
 
-            {/* Header */}
-            <div className="relative overflow-hidden rounded-xl bg-white border-2 border-purple-200 p-4 sm:p-5 mb-3 sm:mb-4 shadow-lg">
-              {/* Decorative corner element */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-purple-600 to-purple-400 transform rotate-45 translate-x-8 -translate-y-8"></div>
-
-              {/* Header with icon */}
-              <div className="flex items-center mb-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-white text-sm">📢</span>
-                </div>
-                <h3 className="font-bold text-sm sm:text-base text-purple-700">
-                  Thanks for the overwhelming responses!
-                </h3>
-              </div>
-
-              {/* Content */}
-              <div className="text-xs sm:text-sm text-gray-700">
-                <p className="font-semibold text-gray-900 mb-3">
-                  Due to several requests received from many students:
-                </p>
-
-                <div className="grid gap-2.5">
-                  <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
-                    <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white text-xs font-bold">1</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-purple-800">
-                        Registration
-                      </span>
-                      <span className="text-gray-700">
-                        {" "}
-                        is now extended till{" "}
-                      </span>
-                      <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        10th September 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
-                    <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white text-xs font-bold">2</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-purple-800">
-                        Submission of Moot Memorial-1
-                      </span>
-                      <span className="text-gray-700"> is extended till </span>
-                      <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        10th September 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
-                    <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white text-xs font-bold">3</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-purple-800">
-                        Submission of Moot Memorial-2
-                      </span>
-                      <span className="text-gray-700"> is extended till </span>
-                      <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        30th September 2025
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom accent */}
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400"></div>
-            </div>
-
-            {/* Content */}
-            <div className="px-3 sm:px-4 sm:sm:px-6 pb-3 sm:pb-3 sm:sm:pb-4">
-              <div className="text-center mb-3 sm:mb-3 sm:sm:mb-4">
-                <p
-                  className="text-gray-700 font-bold text-xs sm:text-xs sm:sm:text-sm mb-1 sm:mb-1 sm:sm:mb-2"
-                  style={{ color: "#6B21A8" }}
-                >
-                  🎓 Be part of India's Most Prestigious Moot Court Marathon —
-                </p>
-                <p className="text-xs sm:text-xs sm:sm:text-sm text-gray-600 mb-2 sm:mb-2 sm:sm:mb-3">
-                  A one-of-a-kind opportunity to debate, defend, and make
-                  history!
-                </p>
-                <p className="text-gray-800 font-bold text-xs sm:text-xs sm:sm:text-sm mb-2 sm:mb-2 sm:sm:mb-3">
-                  🏆 AIM HIGH: ATTEMPT TO BREAK THE INDIA BOOK OF RECORDS!
-                </p>
-                <p className="text-xs sm:text-xs sm:sm:text-sm text-gray-600 mb-2 sm:mb-2 sm:sm:mb-3">
-                  Register your team and compete to be part of a historic
-                  record-setting moot.
-                </p>
-                <p className="text-xs sm:text-xs sm:sm:text-sm text-gray-600 mb-3 sm:mb-3 sm:sm:mb-4">
-                  ✔️ Record-holder certificates for participants of the winning
-                  and qualifying teams.
-                </p>
-              </div>
-
-              {/* Why You Shouldn't Miss This Section */}
-              <div className="mb-3 sm:mb-2">
-                <h3 className="font-bold text-gray-800 text-xs sm:text-xs sm:sm:text-sm mb-2 sm:mb-2 sm:sm:mb-3">
-                  🔔 WHY YOU SHOULDN'T MISS THIS:
-                </h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2 sm:sm:gap-3">
-                  <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
-                    <Target
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "#6B21A8" }}
-                      size={14}
-                    />
-                    <div>
-                      <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
-                        🎯 Special Offer:
-                      </p>
-                      <p className="text-xs text-gray-600">
-                        Get discounted fees for group entries from the same
-                        college/institution!
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
-                    <Users
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "#6B21A8" }}
-                      size={14}
-                    />
-                    <div>
-                      <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
-                        🧑‍💼 Corporate Virtual Internship Program:
-                      </p>
-                      <p className="text-xs text-gray-600">
-                        Limited seats — first-come, first-serve!
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
-                    <Gift
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "#6B21A8" }}
-                      size={14}
-                    />
-                    <div>
-                      <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
-                        🎁 Surprise Giveaway!
-                      </p>
-                      <p className="text-xs text-gray-600">
-                        Tag{" "}
-                        <span
-                          className="font-bold"
-                          style={{ color: "#6B21A8" }}
-                        >
-                          #Juristquest.com
-                        </span>{" "}
-                        in your team registration video on social media and
-                        stand a chance to win a gift voucher!
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
-                    <Award
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "#6B21A8" }}
-                      size={14}
-                    />
-                    <div>
-                      <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
-                        🏅 Become a record-holder:
-                      </p>
-                      <p className="text-xs text-gray-600">
-                        Participate in JuristQuest 2025 and stand tall with an
-                        India Book of Records certificate in your name.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-3 sm:-mt-2 sm:mb-0 sm:w-full">
-                <div className="hidden sm:flex sm:justify-center sm:items-center sm:space-x-4 sm:w-full">
-                  <a
-                    href="/contact-form"
-                    onClick={closePopup}
-                    className="sm:min-w-[120px] py-2 px-6 text-white font-semibold rounded-lg hover:opacity-90 transition-colors text-sm text-center"
-                    style={{ backgroundColor: "#6B21A8" }}
-                  >
-                    Register Now
-                  </a>
-                  <button
-                    onClick={closePopup}
-                    className="py-2 px-6 sm:min-w-[120px] border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
-                  >
-                    Later
-                  </button>
-                </div>
-                {/* Mobile buttons */}
-                <div className="flex flex-col space-y-2 sm:hidden w-full">
-                  <a
-                    href="/contact-form"
-                    onClick={closePopup}
-                    className="w-full py-2 px-4 text-white font-semibold rounded-lg hover:opacity-90 transition-colors text-xs text-center"
-                    style={{ backgroundColor: "#6B21A8" }}
-                  >
-                    Register Now
-                  </a>
-                  <button
-                    onClick={closePopup}
-                    className="w-full py-2 px-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-xs"
-                  >
-                    Later
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes popup {
           from {
             opacity: 0;
@@ -345,7 +110,238 @@ export default function HeroSection() {
         .animate-popup {
           animation: popup 0.3s ease-out;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 }
+
+//  {
+//    showPopup && (
+//      <div className="fixed inset-0 z-50 flex items-center justify-center p-1 sm:p-4 bg-black/50 backdrop-blur-sm">
+//        <div className="relative bg-white rounded-xl shadow-2xl max-w-[98vw] sm:max-w-2xl w-full mx-1 sm:mx-4 overflow-hidden transform animate-popup h-[85vh] xs:h-[90vh] sm:h-auto sm:max-h-auto overflow-y-auto sm:overflow-visible">
+//          <button
+//            onClick={closePopup}
+//            className="absolute top-2 right-2 sm:top-3 sm:right-3 z-20 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600"
+//          >
+//            <X size={16} />
+//          </button>
+
+//          {/* Header */}
+//          <div className="relative overflow-hidden rounded-xl bg-white border-2 border-purple-200 p-4 sm:p-5 mb-3 sm:mb-4 shadow-lg">
+//            {/* Decorative corner element */}
+//            <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-purple-600 to-purple-400 transform rotate-45 translate-x-8 -translate-y-8"></div>
+
+//            {/* Header with icon */}
+//            <div className="flex items-center mb-3">
+//              <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full flex items-center justify-center mr-3">
+//                <span className="text-white text-sm">📢</span>
+//              </div>
+//              <h3 className="font-bold text-sm sm:text-base text-purple-700">
+//                Thanks for the overwhelming responses!
+//              </h3>
+//            </div>
+
+//            {/* Content */}
+//            <div className="text-xs sm:text-sm text-gray-700">
+//              <p className="font-semibold text-gray-900 mb-3">
+//                Due to several requests received from many students:
+//              </p>
+
+//              <div className="grid gap-2.5">
+//                <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
+//                  <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
+//                    <span className="text-white text-xs font-bold">1</span>
+//                  </div>
+//                  <div>
+//                    <span className="font-medium text-purple-800">
+//                      Registration
+//                    </span>
+//                    <span className="text-gray-700"> is now extended till </span>
+//                    <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
+//                      10th September 2025
+//                    </span>
+//                  </div>
+//                </div>
+
+//                <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
+//                  <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
+//                    <span className="text-white text-xs font-bold">2</span>
+//                  </div>
+//                  <div>
+//                    <span className="font-medium text-purple-800">
+//                      Submission of Moot Memorial-1
+//                    </span>
+//                    <span className="text-gray-700"> is extended till </span>
+//                    <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
+//                      10th September 2025
+//                    </span>
+//                  </div>
+//                </div>
+
+//                <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
+//                  <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
+//                    <span className="text-white text-xs font-bold">3</span>
+//                  </div>
+//                  <div>
+//                    <span className="font-medium text-purple-800">
+//                      Submission of Moot Memorial-2
+//                    </span>
+//                    <span className="text-gray-700"> is extended till </span>
+//                    <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
+//                      30th September 2025
+//                    </span>
+//                  </div>
+//                </div>
+//              </div>
+//            </div>
+
+//            {/* Bottom accent */}
+//            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400"></div>
+//          </div>
+
+//          {/* Content */}
+//          <div className="px-3 sm:px-4 sm:sm:px-6 pb-3 sm:pb-3 sm:sm:pb-4">
+//            <div className="text-center mb-3 sm:mb-3 sm:sm:mb-4">
+//              <p
+//                className="text-gray-700 font-bold text-xs sm:text-xs sm:sm:text-sm mb-1 sm:mb-1 sm:sm:mb-2"
+//                style={{ color: "#6B21A8" }}
+//              >
+//                🎓 Be part of India's Most Prestigious Moot Court Marathon —
+//              </p>
+//              <p className="text-xs sm:text-xs sm:sm:text-sm text-gray-600 mb-2 sm:mb-2 sm:sm:mb-3">
+//                A one-of-a-kind opportunity to debate, defend, and make history!
+//              </p>
+//              <p className="text-gray-800 font-bold text-xs sm:text-xs sm:sm:text-sm mb-2 sm:mb-2 sm:sm:mb-3">
+//                🏆 AIM HIGH: ATTEMPT TO BREAK THE INDIA BOOK OF RECORDS!
+//              </p>
+//              <p className="text-xs sm:text-xs sm:sm:text-sm text-gray-600 mb-2 sm:mb-2 sm:sm:mb-3">
+//                Register your team and compete to be part of a historic
+//                record-setting moot.
+//              </p>
+//              <p className="text-xs sm:text-xs sm:sm:text-sm text-gray-600 mb-3 sm:mb-3 sm:sm:mb-4">
+//                ✔️ Record-holder certificates for participants of the winning and
+//                qualifying teams.
+//              </p>
+//            </div>
+
+//            {/* Why You Shouldn't Miss This Section */}
+//            <div className="mb-3 sm:mb-2">
+//              <h3 className="font-bold text-gray-800 text-xs sm:text-xs sm:sm:text-sm mb-2 sm:mb-2 sm:sm:mb-3">
+//                🔔 WHY YOU SHOULDN'T MISS THIS:
+//              </h3>
+
+//              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2 sm:sm:gap-3">
+//                <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
+//                  <Target
+//                    className="mt-0.5 flex-shrink-0"
+//                    style={{ color: "#6B21A8" }}
+//                    size={14}
+//                  />
+//                  <div>
+//                    <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
+//                      🎯 Special Offer:
+//                    </p>
+//                    <p className="text-xs text-gray-600">
+//                      Get discounted fees for group entries from the same
+//                      college/institution!
+//                    </p>
+//                  </div>
+//                </div>
+
+//                <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
+//                  <Users
+//                    className="mt-0.5 flex-shrink-0"
+//                    style={{ color: "#6B21A8" }}
+//                    size={14}
+//                  />
+//                  <div>
+//                    <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
+//                      🧑‍💼 Corporate Virtual Internship Program:
+//                    </p>
+//                    <p className="text-xs text-gray-600">
+//                      Limited seats — first-come, first-serve!
+//                    </p>
+//                  </div>
+//                </div>
+
+//                <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
+//                  <Gift
+//                    className="mt-0.5 flex-shrink-0"
+//                    style={{ color: "#6B21A8" }}
+//                    size={14}
+//                  />
+//                  <div>
+//                    <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
+//                      🎁 Surprise Giveaway!
+//                    </p>
+//                    <p className="text-xs text-gray-600">
+//                      Tag{" "}
+//                      <span className="font-bold" style={{ color: "#6B21A8" }}>
+//                        #Juristquest.com
+//                      </span>{" "}
+//                      in your team registration video on social media and stand a
+//                      chance to win a gift voucher!
+//                    </p>
+//                  </div>
+//                </div>
+
+//                <div className="flex items-start space-x-2 sm:space-x-2 sm:sm:space-x-3 p-2 sm:p-2 sm:sm:p-3 bg-gray-50 rounded-lg">
+//                  <Award
+//                    className="mt-0.5 flex-shrink-0"
+//                    style={{ color: "#6B21A8" }}
+//                    size={14}
+//                  />
+//                  <div>
+//                    <p className="font-semibold text-gray-800 text-xs sm:text-xs sm:sm:text-sm">
+//                      🏅 Become a record-holder:
+//                    </p>
+//                    <p className="text-xs text-gray-600">
+//                      Participate in JuristQuest 2025 and stand tall with an
+//                      India Book of Records certificate in your name.
+//                    </p>
+//                  </div>
+//                </div>
+//              </div>
+//            </div>
+
+//            {/* Action Buttons */}
+//            <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-3 sm:-mt-2 sm:mb-0 sm:w-full">
+//              <div className="hidden sm:flex sm:justify-center sm:items-center sm:space-x-4 sm:w-full">
+//                <a
+//                  href="/contact-form"
+//                  onClick={closePopup}
+//                  className="sm:min-w-[120px] py-2 px-6 text-white font-semibold rounded-lg hover:opacity-90 transition-colors text-sm text-center"
+//                  style={{ backgroundColor: "#6B21A8" }}
+//                >
+//                  Register Now
+//                </a>
+//                <button
+//                  onClick={closePopup}
+//                  className="py-2 px-6 sm:min-w-[120px] border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
+//                >
+//                  Later
+//                </button>
+//              </div>
+//              {/* Mobile buttons */}
+//              <div className="flex flex-col space-y-2 sm:hidden w-full">
+//                <a
+//                  href="/contact-form"
+//                  onClick={closePopup}
+//                  className="w-full py-2 px-4 text-white font-semibold rounded-lg hover:opacity-90 transition-colors text-xs text-center"
+//                  style={{ backgroundColor: "#6B21A8" }}
+//                >
+//                  Register Now
+//                </a>
+//                <button
+//                  onClick={closePopup}
+//                  className="w-full py-2 px-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-xs"
+//                >
+//                  Later
+//                </button>
+//              </div>
+//            </div>
+//          </div>
+//        </div>
+//      </div>
+//    );
+//  }
