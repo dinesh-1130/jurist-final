@@ -386,9 +386,10 @@ export default function HeroSection() {
         />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 z-10 flex flex-col justify-start items-start sm:justify-center sm:items-start pt-[30vh] sm:pt-0 px-6 sm:px-12 text-white text-left">
-          <div className="max-w-3xl w-full" data-aos="fade-up">
-            <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold leading-tight mb-4">
+        {/* Hero Content */}
+        <div className="absolute inset-0 z-10 flex flex-col justify-start items-start sm:justify-center sm:items-start pt-[25vh] sm:pt-0 px-6 sm:px-12 text-white text-left overflow-y-auto sm:overflow-visible">
+          <div className="max-w-3xl w-full pb-8 sm:pb-0" data-aos="fade-up">
+            <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold leading-tight mb-3 sm:mb-4">
               WELCOME TO <br />
               <span className="text-3xl sm:text-3xl md:text-6xl">
                 JURISTQUEST 2025
@@ -411,7 +412,7 @@ export default function HeroSection() {
             </p>
 
             <p
-              className="text-xs sm:text-sm md:text-base font-medium text-white mt-4 leading-snug"
+              className="text-xs sm:text-sm md:text-base font-medium text-white mt-3 sm:mt-4 leading-snug"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -422,15 +423,19 @@ export default function HeroSection() {
             </p>
 
             {/* New Moot Student Portal Section */}
-            <div className="mt-8" data-aos="fade-up" data-aos-delay="400">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4">
+            <div
+              className="mt-4 sm:mt-8"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <h2 className="text-base sm:text-xl md:text-2xl font-semibold text-white mb-2 sm:mb-4">
                 Moot Student Portal
               </h2>
               <a
                 href="https://app.juristquest.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-black px-6 py-3 rounded-lg font-medium text-sm sm:text-base hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-block bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium text-xs sm:text-base hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Click Here
               </a>
