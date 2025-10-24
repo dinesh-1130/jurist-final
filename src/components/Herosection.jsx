@@ -448,7 +448,7 @@ export default function HeroSection() {
       {/* Popup Modal - Desktop, Mobile optimized */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-1 sm:p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative bg-white rounded-xl shadow-2xl max-w-[98vw] sm:max-w-2xl w-full mx-1 sm:mx-4 overflow-hidden transform animate-popup h-[85vh] xs:h-[90vh] sm:max-h-[85vh] overflow-y-auto custom-scrollbar">
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-[98vw] sm:max-w-2xl w-full mx-1 sm:mx-4 overflow-hidden transform animate-popup h-[85vh] xs:h-[90vh] sm:h-auto sm:max-h-none overflow-y-auto sm:overflow-y-visible custom-scrollbar">
             <button
               onClick={closePopup}
               className="absolute top-2 right-2 sm:top-3 sm:right-3 z-20 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600"
@@ -523,36 +523,6 @@ export default function HeroSection() {
                         {" "}
                         within two days from the announcement of quarter finals
                         result
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
-                    <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white text-xs font-bold">4</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-purple-800">
-                        Prelims
-                      </span>
-                      <span className="text-gray-700"> on </span>
-                      <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        26th November 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 rounded-lg p-3 border-l-3 border-purple-400">
-                    <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white text-xs font-bold">5</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-purple-800">
-                        Finals
-                      </span>
-                      <span className="text-gray-700"> on </span>
-                      <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        31st January 2026
                       </span>
                     </div>
                   </div>
