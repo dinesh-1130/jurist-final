@@ -491,7 +491,7 @@ export default function HeroSection() {
                         is now extended till{" "}
                       </span>
                       <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        20th November 2025
+                        26th November 2025
                       </span>
                     </div>
                   </div>
@@ -506,7 +506,7 @@ export default function HeroSection() {
                       </span>
                       <span className="text-gray-700"> is extended till </span>
                       <span className="font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
-                        20th November 2025
+                        26th November 2025
                       </span>
                     </div>
                   </div>
